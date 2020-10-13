@@ -33,8 +33,9 @@ def cosineLaw(a,b,c,oppositeside=True):
         stepc7=math.sqrt(stepc6)
         return stepc7
     elif oppositeside==False:
+        pass
 
-        
+    
 
 
 def toRadians(y):
