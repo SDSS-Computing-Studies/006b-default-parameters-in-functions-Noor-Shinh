@@ -2,7 +2,7 @@
 
 import math
 
-def tempConversion():
+def tempConversion(a,b="Celcius"):
     if b=="Celcius":
         x=a*(9/5)+32
         x=round(x,1)
@@ -22,23 +22,45 @@ def factorPair():
 
 
 
-def cosineLaw():
+def cosineLaw(a,b,c,oppositeside=True):
+    if oppositeside==True:
+        stepc1=math.pow(a,2)+math.pow(b,2)
+        stepc2=(2*a*b)
+        stepc3=toRadians(c)
+        stepc4=math.cos(stepc3)
+        stepc5=(stepc2*stepc4)
+        stepc6=(stepc1)-(stepc5)
+        stepc7=math.sqrt(stepc6)
+        return stepc7
+    elif oppositeside==False:
+
+        
 
 
 def toRadians(y):
-    x=(y*math.pi/180)
+    x=(y*math.pi/180)   
     return x
 
 
 
 
-def solution():
 
+def solution(numbers):
+    x=numbers[1]
+    return x 
 
 def quadratic(a,b,c):
-    x=(-b)+math.sqrt(b**-(4*a*c))/(2*a)
-    y=((-b)-math.sqrt(b**-(4*a*c)))/(2*a)
-    return x and y
+    stepx1=(b*-1)
+    stepx2=math.pow(b,2)-(4*a*c)
+    stepx2=math.sqrt(stepx2)
+    stepx3=(stepx1)+(stepx2) 
+    stepx4=(stepx3)/(2*a)
+    stepy1=(b*-1)
+    stepy2=math.pow(b,2)-(4*a*c)
+    stepy2=math.sqrt(stepy2)
+    stepy3=(stepy1)-(stepy2) 
+    stepy4=(stepy3)/(2*a)
+    numlist=[stepy4,stepx4]
+    numlist.sort()
+    return numlist
 
-c=quadratic(1,4,3)
-print(c)
