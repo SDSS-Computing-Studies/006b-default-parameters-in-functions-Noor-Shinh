@@ -12,7 +12,7 @@ def tempConversion(a,b="Celcius"):
         x=round(x,1)
         return x
 
-def factorPair():
+def factorPair(a,b):
     factors=[b]
     for i in range(1,a+1):
         if b*i==a:
