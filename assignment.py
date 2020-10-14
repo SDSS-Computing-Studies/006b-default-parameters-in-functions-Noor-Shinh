@@ -1,5 +1,4 @@
 #! python3
-
 import math
 
 def tempConversion(a,b="Celcius"):
@@ -20,7 +19,9 @@ def factorPair(a,b):
             factors.sort()
             return factors
 
-
+def toRadians(y):
+    x=(y*math.pi/180)   
+    return x
 
 def cosineLaw(a,b,c,oppositeside=True):
     if oppositeside==True:
@@ -33,14 +34,23 @@ def cosineLaw(a,b,c,oppositeside=True):
         stepc7=math.sqrt(stepc6)
         return stepc7
     elif oppositeside==False:
-        pass
+        d0=toRadians(c)
+        print(d0)
+        d1=math.sin(d0)*a/b
+        print(d1)
+        d2=math.asin(d1)
+        print(d2)
+        dc=d2*180/math.pi
+        d3=180-dc-c
+        print(d3)
+        d4=toRadians(d3)
+        print(d4)
+        d5=(math.sin(d4)*180/math.pi)*b/(math.sin(d0)*180/math.pi)
+        return d5
 
-    
 
 
-def toRadians(y):
-    x=(y*math.pi/180)   
-    return x
+
 
 
 
@@ -64,4 +74,5 @@ def quadratic(a,b,c):
     numlist=[stepy4,stepx4]
     numlist.sort()
     return numlist
+
 
